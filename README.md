@@ -72,16 +72,11 @@ dotnet-design-patterns/
 
 | Pattern | Type | Description | Status |
 |---------|------|-------------|--------|
-| **Railway** | Functional | Chain operations with error handling, avoiding nested try-catch blocks | ✅ Done |
-| **Strategy** | Behavioral | Define family of algorithms, encapsulate each one, make them interchangeable | 🚧 In Progress |
-| **Factory Method** | Creational | Create objects without specifying exact classes, delegate to subclasses | 📋 Planned |
-| **Observer** | Behavioral | Define one-to-many dependency, notify all dependents of state changes | 📋 Planned |
+| **Railway** | Functional | Chain operations with error handling, avoiding nested try-catch blocks | 🚧 In Progress |
+| **Policy** | Behavioral | Define and apply rules for resilience, retry, and fault handling | 📋 Planned |
 | **Decorator** | Structural | Attach additional behavior to objects dynamically without altering structure | 📋 Planned |
-| **Command** | Behavioral | Encapsulate requests as objects, parameterize clients with different requests | 📋 Planned |
-| **Adapter** | Structural | Allow incompatible interfaces to work together through wrapper | 📋 Planned |
-| **Builder** | Creational | Construct complex objects step by step, separate construction from representation | 📋 Planned |
-| **Singleton** | Creational | Ensure class has only one instance, provide global access point | 📋 Planned |
-| **Template Method** | Behavioral | Define skeleton of algorithm, let subclasses override specific steps | 📋 Planned |
+
+> 🔮 **Coming Soon**: More modern patterns including functional programming concepts, reactive patterns, and cloud-native design patterns are being planned for future releases.
 
 ### Legend
 - ✅ **Done**: Fully implemented with tests and samples
