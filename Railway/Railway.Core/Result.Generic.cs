@@ -13,6 +13,7 @@
             Error = isSuccess ? Error.None : error;
         }
 
+        public static Result<T> Create(T value) => Success(value);
         public static Result<T> Success(T value) => new(true, value, Error.None);
         public static Result<T> Failure(Error error) => new(false, default, error);
 
