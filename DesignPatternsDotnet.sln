@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Railway.Core", "Railway\Rai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Railway.Sample", "Railway\Railway.Sample\Railway.Sample.csproj", "{3A8BCABB-CE2A-4578-BF64-FDD1046777CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Railway.Test", "Railway\Railway.Test\Railway.Test.csproj", "{663F6ADF-177A-42BA-B30D-F940547076B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{3A8BCABB-CE2A-4578-BF64-FDD1046777CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A8BCABB-CE2A-4578-BF64-FDD1046777CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A8BCABB-CE2A-4578-BF64-FDD1046777CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{663F6ADF-177A-42BA-B30D-F940547076B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{663F6ADF-177A-42BA-B30D-F940547076B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{663F6ADF-177A-42BA-B30D-F940547076B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{663F6ADF-177A-42BA-B30D-F940547076B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{AB4F0105-C132-4450-ABA4-E50B401093EB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{3A8BCABB-CE2A-4578-BF64-FDD1046777CC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{663F6ADF-177A-42BA-B30D-F940547076B5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8BA9C05-4560-477C-BA75-CE4D8AEA94EA}
