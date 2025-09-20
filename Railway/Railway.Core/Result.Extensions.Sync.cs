@@ -39,7 +39,7 @@
             ? Result<T>.Failure(error)
             : result;
 
-        public static TOut Match<T, TOut>(this Result<T> result, Func<T, TOut> onSuccess,Func<Error, TOut> onFailure)
+        public static TOut Match<T, TOut>(this Result<T> result, Func<T, TOut> onSuccess, Func<Error, TOut> onFailure)
         => result.IsSuccess ? onSuccess(result.Value!) : onFailure(result.Error);
 
         public static Result ToUnit<T>(this Result<T> result)
