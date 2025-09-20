@@ -4,13 +4,14 @@ namespace Railway.Sample.Model
 {
     public class Product
     {
-        public int Id { get; private set; }
+        public Guid Id { get; private set; }
         public string Name { get; private set; } = default!;
         public decimal Price { get; private set; }
         public int Stock { get; private set; }
 
-        private static Product Empty => new Product
+        private static Product NewEmpty => new Product
         {
+            Id = Guid.NewGuid(),
             Name = "",
             Price = 0,
             Stock = 0
@@ -18,7 +19,7 @@ namespace Railway.Sample.Model
 
         public static Result<Product> Create(string name, decimal price, int stock)
         {
-            return Result<Product>.Create(Empty)
+            return Result<Product>.Create(NewEmpty)
                 .Bind(r => r.UpdatePrice(price))
                 .Bind(r => r.UpdateStock(stock))
                 .Bind(r => r.Rename(name));
@@ -56,5 +57,8 @@ namespace Railway.Sample.Model
                     return this;
                 });
         }
+
+        public override string ToString()
+            => $"Product[{Id:D}]: {Name} - ${Price:F2} (Stock: {Stock})";
     }
 }

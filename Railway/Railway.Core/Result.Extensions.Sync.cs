@@ -19,6 +19,21 @@
             return result;
         }
 
+        public static Result<T> OnFailure<T>(this Result<T> result, Action<Error> action)
+        {
+            if (!result.IsSuccess)
+                action(result.Error);
+            return result;
+        }
+
+        // Extension methods for non-generic Result
+        public static Result OnFailure(this Result result, Action<Error> action)
+        {
+            if (!result.IsSuccess)
+                action(result.Error);
+            return result;
+        }
+
         public static Result<T> Ensure<T>(this Result<T> result, Func<T, bool> predicate, Error error)
         => result.IsSuccess && !predicate(result.Value!)
             ? Result<T>.Failure(error)

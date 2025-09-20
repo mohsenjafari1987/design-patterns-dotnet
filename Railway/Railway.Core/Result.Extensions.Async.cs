@@ -24,6 +24,14 @@
             return r;
         }
 
+        public static async Task<Result<T>> OnFailureAsync<T>(
+            this Task<Result<T>> task, Func<Error, Task> onFailure)
+        {
+            var r = await task.ConfigureAwait(false);
+            if (!r.IsSuccess) await onFailure(r.Error).ConfigureAwait(false);
+            return r;
+        }
+
         public static async Task<Result<T>> EnsureAsync<T>(
             this Task<Result<T>> task, Func<T, Task<bool>> predicate, Error error)
         {
